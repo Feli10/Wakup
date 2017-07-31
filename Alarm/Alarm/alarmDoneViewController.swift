@@ -6,6 +6,22 @@
 //  Copyright © 2017 Make School. All rights reserved.
 //
 
+// add hint
+// uppercase and lowercase all okay
+// remenber APIs!
+
+/*
+ later stuff:
+ 
+ acounts
+ leaderboards
+ points
+ similarity percentage
+ statistics
+ more sounds
+ 
+ */
+
 import UIKit
 
 class alarmDoneViewController: UIViewController {
