@@ -11,10 +11,10 @@
 		70B46E6B1F2F0758000A0C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B46E691F2F0758000A0C6F /* Main.storyboard */; };
 		70B46E6E1F2F0758000A0C6F /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E6C1F2F0758000A0C6F /* Alarm.xcdatamodeld */; };
 		70B46E701F2F0758000A0C6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B46E6F1F2F0758000A0C6F /* Assets.xcassets */; };
-		70B46E731F2F0758000A0C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B46E711F2F0758000A0C6F /* LaunchScreen.storyboard */; };
 		70B46E7E1F2F07D4000A0C6F /* alarmsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E7D1F2F07D4000A0C6F /* alarmsTableViewController.swift */; };
 		70B46E801F2F0810000A0C6F /* alarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E7F1F2F080F000A0C6F /* alarmViewController.swift */; };
 		70B46E821F2F083A000A0C6F /* alarmDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E811F2F083A000A0C6F /* alarmDoneViewController.swift */; };
+		70B46E851F2F1E7F000A0C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B46E831F2F1E7F000A0C6F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,11 +23,11 @@
 		70B46E6A1F2F0758000A0C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		70B46E6D1F2F0758000A0C6F /* Alarm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Alarm.xcdatamodel; sourceTree = "<group>"; };
 		70B46E6F1F2F0758000A0C6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		70B46E721F2F0758000A0C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70B46E741F2F0758000A0C6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70B46E7D1F2F07D4000A0C6F /* alarmsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmsTableViewController.swift; sourceTree = "<group>"; };
 		70B46E7F1F2F080F000A0C6F /* alarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmViewController.swift; sourceTree = "<group>"; };
 		70B46E811F2F083A000A0C6F /* alarmDoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmDoneViewController.swift; sourceTree = "<group>"; };
+		70B46E841F2F1E7F000A0C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +60,11 @@
 		70B46E641F2F0758000A0C6F /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				70B46E831F2F1E7F000A0C6F /* LaunchScreen.storyboard */,
 				70B46E7C1F2F07B1000A0C6F /* Controllers */,
 				70B46E651F2F0758000A0C6F /* AppDelegate.swift */,
 				70B46E691F2F0758000A0C6F /* Main.storyboard */,
 				70B46E6F1F2F0758000A0C6F /* Assets.xcassets */,
-				70B46E711F2F0758000A0C6F /* LaunchScreen.storyboard */,
 				70B46E741F2F0758000A0C6F /* Info.plist */,
 				70B46E6C1F2F0758000A0C6F /* Alarm.xcdatamodeld */,
 			);
@@ -141,7 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B46E731F2F0758000A0C6F /* LaunchScreen.storyboard in Resources */,
+				70B46E851F2F1E7F000A0C6F /* LaunchScreen.storyboard in Resources */,
 				70B46E701F2F0758000A0C6F /* Assets.xcassets in Resources */,
 				70B46E6B1F2F0758000A0C6F /* Main.storyboard in Resources */,
 			);
@@ -173,10 +173,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		70B46E711F2F0758000A0C6F /* LaunchScreen.storyboard */ = {
+		70B46E831F2F1E7F000A0C6F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				70B46E721F2F0758000A0C6F /* Base */,
+				70B46E841F2F1E7F000A0C6F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +322,7 @@
 				70B46E791F2F0758000A0C6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

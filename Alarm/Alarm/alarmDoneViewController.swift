@@ -10,8 +10,6 @@ import UIKit
 
 class alarmDoneViewController: UIViewController {
     
-    @IBOutlet weak var whyAnswer: UITextField!
-    @IBOutlet weak var mathAnswer: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }

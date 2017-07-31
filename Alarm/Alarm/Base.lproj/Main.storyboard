@@ -13,18 +13,27 @@
         <!--Alarms-->
         <scene sceneID="8bW-Eg-fhj">
             <objects>
-                <tableViewController id="u1u-Oh-zZz" sceneMemberID="viewController">
+                <tableViewController id="u1u-Oh-zZz" customClass="alarmsTableViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zYf-Oz-Nh4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GN3-yA-xYr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmCell" id="GN3-yA-xYr">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GN3-yA-xYr" id="6hN-o3-ukp">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alarm Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOr-Hu-l6s">
+                                            <rect key="frame" x="8" y="12" width="101" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <color key="textColor" red="0.52579110860824585" green="0.88962286710739136" blue="0.32978808879852295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -43,12 +52,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1p-RJ-xu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="257" y="93"/>
+            <point key="canvasLocation" x="256.80000000000001" y="92.203898050974516"/>
         </scene>
         <!--Alarm-->
         <scene sceneID="fe9-ks-tKk">
             <objects>
-                <viewController id="ubu-SO-UoI" sceneMemberID="viewController">
+                <viewController id="ubu-SO-UoI" customClass="alarmViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8FV-SG-AIY"/>
                         <viewControllerLayoutGuide type="bottom" id="kxn-9y-4lh"/>
@@ -57,8 +66,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-rt-bpk" userLabel="Super Stack View">
-                                <rect key="frame" x="16" y="104" width="343" height="309"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1lD-rt-bpk" userLabel="Super Stack View">
+                                <rect key="frame" x="16" y="104" width="343" height="279"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="E4c-40-Nzc">
                                         <rect key="frame" x="0.0" y="0.0" width="210" height="30"/>
@@ -81,7 +90,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-DD-cWp">
-                                        <rect key="frame" x="0.0" y="80" width="163" height="68"/>
+                                        <rect key="frame" x="0.0" y="70" width="163" height="68"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PF7-mv-FCF">
                                                 <rect key="frame" x="0.0" y="0.0" width="163" height="29"/>
@@ -102,7 +111,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dl2-K9-6Gu">
-                                        <rect key="frame" x="0.0" y="198" width="249" height="30"/>
+                                        <rect key="frame" x="0.0" y="178" width="249" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yug-jY-BnE">
                                                 <rect key="frame" x="0.0" y="5" width="39" height="20.5"/>
@@ -122,7 +131,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r8F-50-EZw">
-                                        <rect key="frame" x="0.0" y="278" width="166" height="31"/>
+                                        <rect key="frame" x="0.0" y="248" width="166" height="31"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mPw-bL-MMN">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -140,9 +149,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1lD-rt-bpk" firstAttribute="top" secondItem="8FV-SG-AIY" secondAttribute="bottom" constant="40" id="6yt-FD-VwB"/>
-                            <constraint firstItem="1lD-rt-bpk" firstAttribute="leading" secondItem="kD9-Ps-6Vw" secondAttribute="leadingMargin" id="JXd-Jn-4cV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1lD-rt-bpk" secondAttribute="trailing" id="QPk-lp-gO5"/>
+                            <constraint firstItem="1lD-rt-bpk" firstAttribute="leading" secondItem="kD9-Ps-6Vw" secondAttribute="leadingMargin" id="2ro-DV-QTD"/>
+                            <constraint firstItem="1lD-rt-bpk" firstAttribute="top" secondItem="8FV-SG-AIY" secondAttribute="bottom" constant="40" id="FkM-1m-ig2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1lD-rt-bpk" secondAttribute="trailing" id="Mof-p9-gmh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Alarm" id="A4H-JN-EyQ">
@@ -163,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1053.5999999999999" y="91.304347826086968"/>
         </scene>
-        <!--View Controller-->
+        <!--Alarm Done View Controller-->
         <scene sceneID="OJb-21-k1p">
             <objects>
-                <viewController id="6bN-RA-L8e" sceneMemberID="viewController">
+                <viewController id="6bN-RA-L8e" customClass="alarmDoneViewController" customModule="Alarm" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ndy-ja-Gk7"/>
                         <viewControllerLayoutGuide type="bottom" id="c9b-Sx-xup"/>
