@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Wakup.xcscheme</key>
+		<key>Alarm.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>DCF68E631F2CB5A20079FF63</key>
+		<key>70B46E611F2F0758000A0C6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
