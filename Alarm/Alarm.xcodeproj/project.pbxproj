@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7045BA9E1F2F25D900DE67CF /* alarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7045BA9D1F2F25D900DE67CF /* alarmTableViewCell.swift */; };
+		700277101F31A8230094670C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7002770F1F31A8230094670C /* CoreDataHelper.swift */; };
+		70AC6A101F32AD3800CDCE28 /* alarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AC6A0F1F32AD3800CDCE28 /* alarmTableViewCell.swift */; };
 		70B46E661F2F0758000A0C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E651F2F0758000A0C6F /* AppDelegate.swift */; };
 		70B46E6B1F2F0758000A0C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70B46E691F2F0758000A0C6F /* Main.storyboard */; };
 		70B46E6E1F2F0758000A0C6F /* Alarm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70B46E6C1F2F0758000A0C6F /* Alarm.xcdatamodeld */; };
@@ -19,7 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7045BA9D1F2F25D900DE67CF /* alarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmTableViewCell.swift; sourceTree = "<group>"; };
+		7002770F1F31A8230094670C /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		70AC6A0F1F32AD3800CDCE28 /* alarmTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmTableViewCell.swift; sourceTree = "<group>"; };
 		70B46E621F2F0758000A0C6F /* Alarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B46E651F2F0758000A0C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70B46E6A1F2F0758000A0C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,9 +64,9 @@
 		70B46E641F2F0758000A0C6F /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				7002770F1F31A8230094670C /* CoreDataHelper.swift */,
 				70B46E7C1F2F07B1000A0C6F /* Controllers */,
 				70B46E651F2F0758000A0C6F /* AppDelegate.swift */,
-				7045BA9D1F2F25D900DE67CF /* alarmTableViewCell.swift */,
 				70B46E691F2F0758000A0C6F /* Main.storyboard */,
 				70B46E831F2F1E7F000A0C6F /* LaunchScreen.storyboard */,
 				70B46E6F1F2F0758000A0C6F /* Assets.xcassets */,
@@ -80,6 +82,7 @@
 				70B46E7D1F2F07D4000A0C6F /* alarmsTableViewController.swift */,
 				70B46E7F1F2F080F000A0C6F /* alarmViewController.swift */,
 				70B46E811F2F083A000A0C6F /* alarmDoneViewController.swift */,
+				70AC6A0F1F32AD3800CDCE28 /* alarmTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -157,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AC6A101F32AD3800CDCE28 /* alarmTableViewCell.swift in Sources */,
 				70B46E821F2F083A000A0C6F /* alarmDoneViewController.swift in Sources */,
-				7045BA9E1F2F25D900DE67CF /* alarmTableViewCell.swift in Sources */,
+				700277101F31A8230094670C /* CoreDataHelper.swift in Sources */,
 				70B46E801F2F0810000A0C6F /* alarmViewController.swift in Sources */,
 				70B46E7E1F2F07D4000A0C6F /* alarmsTableViewController.swift in Sources */,
 				70B46E661F2F0758000A0C6F /* AppDelegate.swift in Sources */,
@@ -288,9 +292,10 @@
 				DEVELOPMENT_TEAM = LC75G6EDD8;
 				INFOPLIST_FILE = Alarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felixspace.Alarm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixspace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s armv6 armv5s";
 			};
 			name = Debug;
 		};
@@ -301,9 +306,10 @@
 				DEVELOPMENT_TEAM = LC75G6EDD8;
 				INFOPLIST_FILE = Alarm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.felixspace.Alarm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felixspace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s armv6 armv5s";
 			};
 			name = Release;
 		};

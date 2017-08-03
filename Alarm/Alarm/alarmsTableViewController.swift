@@ -9,7 +9,6 @@
 import UIKit
 
 class alarmsTableViewController: UITableViewController {
-    
     var alarms = [Alarm]() {
         didSet {
             tableView.reloadData()
@@ -21,7 +20,7 @@ class alarmsTableViewController: UITableViewController {
     }
     // 2
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmTableViewCell", for: indexPath) as! alarmTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "alarmTableViewCell", for: indexPath) as! AlarmTableViewCell
         
         // 1
         let row = indexPath.row
@@ -30,14 +29,48 @@ class alarmsTableViewController: UITableViewController {
         let alarm = alarms[row]
         
         // 3
-        cell.alarmTitle.text = alarm.title
+        cell.alarmTitle.text = alarm.task
         
         
         return cell
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let alarmViewController = segue.destination as! alarmViewController
+        
+        if let identifier = segue.identifier {
+            if identifier == "displayAlarm" {
+                print("Table view cell tapped")
+                
+                // 1
+                let indexPath = tableView.indexPathForSelectedRow!
+                // 2
+                let alarm = alarms[indexPath.row]
+                // 3
+                
+                // 4
+                alarmViewController.alarm = alarm
+                self.alarms = CoreDataHelper.retrieveAlarms()
+            } else if identifier == "addAlarm" {
+                print("+ button tapped")
+            }
+        }
+    }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //1
+            CoreDataHelper.deleteAlarm(alarm: alarms[indexPath.row])
+            //2
+            alarms = CoreDataHelper.retrieveAlarms()
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alarms = CoreDataHelper.retrieveAlarms()
+        
     }
+
+    
 }

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class alarmTableViewCell: UITableViewCell {
+class AlarmTableViewCell: UITableViewCell {
+
     @IBOutlet weak var alarmTitle: UILabel!
     
 }
