@@ -9,16 +9,19 @@
 import UIKit
 
 class alarmsTableViewController: UITableViewController {
+    var curAlarm : Alarm? = nil
     var alarms = [Alarm]() {
         didSet {
             tableView.reloadData()
         }
     }
+    
     // 1
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return alarms.count
     }
     // 2
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "alarmTableViewCell", for: indexPath) as! AlarmTableViewCell
         
@@ -36,7 +39,6 @@ class alarmsTableViewController: UITableViewController {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let alarmViewController = segue.destination as! alarmViewController
-        
         if let identifier = segue.identifier {
             if identifier == "displayAlarm" {
                 print("Table view cell tapped")
@@ -64,6 +66,7 @@ class alarmsTableViewController: UITableViewController {
         }
     }
     
+
     
     
     override func viewDidLoad() {

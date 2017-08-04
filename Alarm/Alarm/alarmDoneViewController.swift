@@ -26,17 +26,19 @@ import UIKit
 
 class alarmDoneViewController: UIViewController, UITextFieldDelegate {
     
+    var curAlarm : Alarm? = nil
+    
     @IBOutlet weak var reasonAnswer: UITextField?
     @IBOutlet weak var hint: UILabel!
     @IBOutlet weak var mathProblem: UILabel!
     @IBOutlet weak var mathAnswer: UITextField?
-    @IBOutlet weak var alarmDoneTime: UILabel!
     @IBOutlet weak var stopButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         reasonAnswer?.delegate = self
         mathAnswer?.delegate = self
+
     }
     
     
@@ -44,4 +46,20 @@ class alarmDoneViewController: UIViewController, UITextFieldDelegate {
         reasonAnswer?.resignFirstResponder()
         mathAnswer?.resignFirstResponder()
     }
+    
+    
+    @IBAction func submitAnswer(_ sender: Any) {
+        if (reasonAnswer?.text)! == curAlarm?.reason && (mathAnswer?.text)! == "22"{
+            self.stopButton.isHidden = false
+        }
+    }
+    @IBAction func wantHint(_ sender: Any) {
+        hint.text = "Reason: \(String(describing: curAlarm!.reason!))"
+        hint.isHidden = false
+    }
+    @IBAction func changeProblem(_ sender: Any) {
+        mathProblem.text = "2*4+7*1+0-4+11 ="
+    }
+    
+    //print(alarmViewController.alarm.reason)
 }
